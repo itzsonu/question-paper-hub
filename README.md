@@ -2,7 +2,119 @@
 A centralized university question paper repository where students can upload, search, view, and download verified question papers with structured metadata, duplicate detection, cloud storage, and admin moderation.
 
 
-Bilkul. Is project ko main **3 phases** mein build karunga: pehle simple MVP, phir security/moderation, phir advanced features. Isse tum unnecessary complexity se bachoge.
+question-paper-hub/
+│
+├── frontend/
+│   ├── app/
+│   │   ├── (auth)/
+│   │   │   ├── login/
+│   │   │   │   └── page.tsx
+│   │   │   └── register/
+│   │   │       └── page.tsx
+│   │   │
+│   │   ├── papers/
+│   │   │   ├── page.tsx
+│   │   │   └── [id]/
+│   │   │       └── page.tsx
+│   │   │
+│   │   ├── upload/
+│   │   │   └── page.tsx
+│   │   │
+│   │   ├── my-uploads/
+│   │   │   └── page.tsx
+│   │   │
+│   │   ├── admin/
+│   │   │   ├── page.tsx
+│   │   │   ├── papers/
+│   │   │   │   └── page.tsx
+│   │   │   ├── pending/
+│   │   │   │   └── page.tsx
+│   │   │   ├── reports/
+│   │   │   │   └── page.tsx
+│   │   │   └── users/
+│   │   │       └── page.tsx
+│   │   │
+│   │   ├── page.tsx
+│   │   ├── layout.tsx
+│   │   └── globals.css
+│   │
+│   ├── components/
+│   │   ├── Navbar.tsx
+│   │   ├── Footer.tsx
+│   │   ├── PaperCard.tsx
+│   │   ├── SearchBar.tsx
+│   │   ├── FilterPanel.tsx
+│   │   ├── UploadForm.tsx
+│   │   └── Loading.tsx
+│   │
+│   ├── lib/
+│   │   ├── api.ts
+│   │   └── auth.ts
+│   │
+│   ├── types/
+│   │   └── paper.ts
+│   │
+│   ├── public/
+│   │
+│   ├── .env.local
+│   ├── package.json
+│   └── tsconfig.json
+│
+│
+├── backend/
+│   ├── src/
+│   │   ├── config/
+│   │   │   ├── db.ts
+│   │   │   └── storage.ts
+│   │   │
+│   │   ├── controllers/
+│   │   │   ├── auth.controller.ts
+│   │   │   ├── paper.controller.ts
+│   │   │   ├── upload.controller.ts
+│   │   │   └── admin.controller.ts
+│   │   │
+│   │   ├── middleware/
+│   │   │   ├── auth.middleware.ts
+│   │   │   ├── admin.middleware.ts
+│   │   │   ├── upload.middleware.ts
+│   │   │   └── error.middleware.ts
+│   │   │
+│   │   ├── routes/
+│   │   │   ├── auth.routes.ts
+│   │   │   ├── paper.routes.ts
+│   │   │   ├── upload.routes.ts
+│   │   │   └── admin.routes.ts
+│   │   │
+│   │   ├── services/
+│   │   │   ├── paper.service.ts
+│   │   │   ├── storage.service.ts
+│   │   │   ├── hash.service.ts
+│   │   │   └── auth.service.ts
+│   │   │
+│   │   ├── utils/
+│   │   │   ├── validation.ts
+│   │   │   └── generateFileName.ts
+│   │   │
+│   │   ├── app.ts
+│   │   └── server.ts
+│   │
+│   ├── .env
+│   ├── package.json
+│   └── tsconfig.json
+│
+│
+├── database/
+│   ├── migrations/
+│   └── schema.sql
+│
+├── docs/
+│   ├── architecture.md
+│   ├── api.md
+│   └── database.md
+│
+├── .gitignore
+├── README.md
+└── package.json
 
 # 1. Overall Architecture
 
