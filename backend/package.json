@@ -4,7 +4,7 @@
   "description": "",
   "main": "dist/server.js",
   "scripts": {
-    "dev": "ts-node-dev --respawn --transpile-only server.ts",
+    "dev": "npm run build && node dist/server.js",
     "build": "tsc",
     "start": "node dist/server.js",
     "test": "npm run build",
@@ -26,6 +26,6 @@
     "@types/node": "^22.20.2",
     "@types/pg": "^8.23.1",
     "ts-node-dev": "^2.0.0",
-    "typescript": "^7.0.2"
+    "typescript": "^5.7.3"
   }
 }
