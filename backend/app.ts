@@ -1,5 +1,6 @@
 import express from "express";
 import cors from "cors";
+import { checkDatabaseConnection } from "./database";
 
 // Create Express application
 const app = express();
@@ -16,6 +17,18 @@ app.get("/api/health", (req, res) => {
     success: true,
     message: "Question Paper Hub API is running",
   });
+});
+
+app.get("/api/health/database", async (req, res) => {
+  try {
+    await checkDatabaseConnection();
+    res.json({ success: true, message: "Database connection is healthy" });
+  } catch {
+    res.status(503).json({
+      success: false,
+      message: "Database connection is unavailable",
+    });
+  }
 });
 
 export default app;
