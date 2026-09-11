@@ -116,6 +116,248 @@ question-paper-hub/
 ├── README.md
 └── package.json
 
+
+Haan. Main code **phase-by-phase** dunga, aur har phase complete hone ke baad next phase par jayenge.
+
+### Phase 1 — Project Foundation
+
+Code:
+
+* Next.js frontend setup
+* Node.js + Express backend setup
+* TypeScript configuration
+* Basic folder structure
+* Frontend ↔ Backend connection
+* `.env` setup
+* Basic homepage
+* Basic health-check API
+
+**Output:** Project locally run karega.
+
+---
+
+### Phase 2 — Database
+
+Code:
+
+* PostgreSQL connection
+* Database schema
+* `users` table
+* `papers` table
+* `reports` table
+* Relationships
+* Required indexes
+
+**Output:** Paper aur user data properly store ho sakega.
+
+---
+
+### Phase 3 — Authentication
+
+Code:
+
+* Register
+* Login
+* Logout
+* Password hashing
+* Authentication middleware
+* User/Admin roles
+* Protected routes
+
+**Output:** Secure user system.
+
+---
+
+### Phase 4 — Question Paper Upload ⭐
+
+Code:
+
+* Upload form
+* Year/department/semester/subject fields
+* PDF validation
+* File-size validation
+* SHA-256 hash
+* Duplicate detection
+* Automatic storage filename/key
+* Cloudflare R2 integration
+* Metadata → PostgreSQL
+
+**Output:**
+
+```text
+User uploads PDF
+       ↓
+Validate
+       ↓
+Hash
+       ↓
+Duplicate check
+       ↓
+R2
+       ↓
+PostgreSQL
+```
+
+---
+
+### Phase 5 — Search & Browse
+
+Code:
+
+* All papers page
+* Search bar
+* University filter
+* Department filter
+* Semester filter
+* Subject filter
+* Year filter
+* Exam type filter
+* Pagination
+* Paper details page
+
+**Output:** Student easily paper find kar sakega.
+
+---
+
+### Phase 6 — View & Download
+
+Code:
+
+* PDF preview
+* Secure download
+* Signed URLs
+* Download counter
+* Proper error handling
+
+**Output:**
+
+```text
+Search
+ ↓
+Paper
+ ↓
+View PDF / Download
+```
+
+---
+
+### Phase 7 — Admin Panel ⭐
+
+Code:
+
+* Admin dashboard
+* Pending uploads
+* Paper preview
+* Approve
+* Reject
+* Delete
+* Reports
+* User management
+
+**Output:**
+
+```text
+Upload
+   ↓
+Pending
+   ↓
+Admin
+   ↓
+Approve
+   ↓
+Public
+```
+
+---
+
+### Phase 8 — Security & Production Hardening
+
+Code:
+
+* Rate limiting
+* Advanced input validation
+* Better file validation
+* Authorization checks
+* Secure headers
+* Error handling
+* Logging
+* Upload abuse protection
+
+---
+
+### Phase 9 — UI/UX + Polish
+
+Code:
+
+* Responsive design
+* Better navbar
+* Loading states
+* Empty states
+* Error messages
+* Toast notifications
+* Mobile UI
+* Better search experience
+
+---
+
+### Phase 10 — Deployment
+
+Setup:
+
+```text
+Frontend  → Vercel
+Backend   → Cloud hosting
+Database  → PostgreSQL
+PDF       → Cloudflare R2
+Domain    → Custom domain
+```
+
+Plus:
+
+* Production environment variables
+* CORS
+* Database migrations
+* Production testing
+
+---
+
+## Development sequence
+
+```text
+PHASE 1
+Foundation
+   ↓
+PHASE 2
+Database
+   ↓
+PHASE 3
+Authentication
+   ↓
+PHASE 4 ⭐
+Upload + R2 + Duplicate Detection
+   ↓
+PHASE 5
+Search
+   ↓
+PHASE 6
+View + Download
+   ↓
+PHASE 7 ⭐
+Admin
+   ↓
+PHASE 8
+Security
+   ↓
+PHASE 9
+UI/UX
+   ↓
+PHASE 10
+Deployment
+```
+
+**Important:** Har phase mein main tumhe **exact files + complete code + comments + commands to run + testing steps** dunga. Tum phase complete karke output/error doge, phir hum next phase par jayenge.
+
+
 # 1. Overall Architecture
 
 ```text
